@@ -22,3 +22,10 @@ export async function PUT(request: NextRequest, { params }: Props) {
 
   return NextResponse.json({ id: body.id, name: body.name, isUpdated: true });
 }
+
+export function DELETE(request: NextRequest, { params }: Props) {
+  if (params.id > 10)
+    return NextResponse.json({ error: "User not found" }, { status: 404 });
+
+  return NextResponse.json({});
+}
