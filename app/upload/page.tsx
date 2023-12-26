@@ -21,6 +21,10 @@ const UploadPage = () => {
           setPublicId(info.public_id);
         }}
         uploadPreset="dsrqynhc"
+        options={{
+          sources: ["local"],
+          multiple: false,
+        }}
       >
         {({ open }) => (
           <button className="btn btn-primary" onClick={() => open()}>
