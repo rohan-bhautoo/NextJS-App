@@ -2,6 +2,7 @@ import {
   Html,
   Body,
   Container,
+  Tailwind,
   Text,
   Link,
   Preview,
@@ -16,14 +17,16 @@ const WelcomeTemplate = ({ name }: Props) => {
   return (
     <Html>
       <Preview>Welcome abroad!</Preview>
-      <Body>
-        <Container>
-          <Text>Hello {name}</Text>
-          <Link href="https://github.com/rohan-bhautoo">
-            www.github.com/rohan-bhautoo
-          </Link>
-        </Container>
-      </Body>
+      <Tailwind>
+        <Body className="bg-white">
+          <Container>
+            <Text className="font-bold text-3xl">Hello {name}</Text>
+            <Link href="https://github.com/rohan-bhautoo">
+              www.github.com/rohan-bhautoo
+            </Link>
+          </Container>
+        </Body>
+      </Tailwind>
     </Html>
   );
 };
