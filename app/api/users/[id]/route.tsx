@@ -9,7 +9,7 @@ interface Props {
 export async function GET(request: NextRequest, { params }: Props) {
   const user = await prisma.user.findUnique({
     where: {
-      id: parseInt(params.id),
+      id: params.id,
     },
   });
 
@@ -52,7 +52,7 @@ export async function PUT(request: NextRequest, { params }: Props) {
 export async function DELETE(request: NextRequest, { params }: Props) {
   const user = await prisma.user.findUnique({
     where: {
-      id: parseInt(params.id),
+      id: params.id,
     },
   });
 
