@@ -1,17 +1,10 @@
-import Image from "next/image";
-import blackHole from "@/public/images/Space-Stars-Black-Hole.jpg";
+import HeavyComponent from "./components/HeavyComponent";
 
 export default async function Home() {
   return (
     <main className="relative h-screen">
-      <Image
-        src="https://bit.ly/react-cover"
-        className="object-cover"
-        alt="Black Hole"
-        fill
-        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-        quality={100}
-      />
+      <h1>Hello World</h1>
+      <HeavyComponent />
     </main>
   );
 }
